@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios'); // requestの代わりにaxiosを使用
+const cors = require('cors'); // corsミドルウェアを追加
+
+// corsミドルウェアを使用
+router.use(cors());
 
 router.get('/', async (req, res) => {
     try {
